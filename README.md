@@ -8,25 +8,30 @@
 
 ---
 
-## 🔑 Download & Archive Password
+## 🏗️ System Architecture & Workflow
 
-Due to security compliance and traffic verification, the release archive is password-protected.
+```mermaid
+graph TD
+    Layer1["🌐 Layer 1: Browser Extension (background.js)"]
+    Layer2["⚙️ Layer 2: Native Host (vlc_host.bat & vlc_host.py)"]
+    Layer3["🎬 Layer 3: VLC Media Player (vlc.exe)"]
 
-- **Encrypted Archive**: `vlc-link-opener-setup.zip`
-- **Archive Password**: `ziplootvlc124`
-- **Official Blog Post & Setup Guide**: [https://ziploot.app/posts/vlc-link-opener-extension-setup-guide](https://ziploot.app/posts/vlc-link-opener-extension-setup-guide)
+    Layer1 -->|"1. Sends URL via Native Messaging"| Layer2
+    Layer2 -->|"2. Launches VLC Player"| Layer3
+```
 
 ---
 
-## ⚡ Quick Setup Instructions
+## ⚡ Quick Setup Guide
 
-1. **Extract Archive**: Extract `vlc-link-opener-setup.zip` using password `ziplootvlc124`.
-2. **Run Installer**: Right-click `setup.bat` and select **Run as Administrator**.
-3. **Load Extension in Chrome**:
+1. **Download Archive**: Download `vlc_link_opener_setup.zip` directly from this repository or from [ZipLoot.app](https://ziploot.app/posts/vlc-link-opener-extension-setup-guide).
+2. **Extract Package**: Extract the ZIP file into a dedicated directory (e.g. `C:\vlc-link-opener`).
+3. **Run Installer**: Right-click `setup.bat` and select **Run as Administrator** to register the Native Messaging host.
+4. **Load Extension in Chrome**:
    - Open Chrome and navigate to `chrome://extensions`.
    - Enable **Developer mode** in the top right corner.
    - Click **Load unpacked** and select the **`extension`** subfolder inside the extracted directory.
-4. **Enjoy**: Right-click any media link on the web and select **"Play in VLC"**!
+5. **Enjoy**: Right-click any stream URL or media link on the web and select **"Play in VLC"**!
 
 ---
 
@@ -36,13 +41,14 @@ All source code files (Python Native Host script, Chrome Extension Manifest V3, 
 
 | Metric | Details |
 | :--- | :--- |
-| **Encrypted Archive** | `vlc-link-opener-setup.zip` |
-| **File Size** | `21.46 KB` (21,978 bytes) |
-| **SHA-256 Hash** | `c45da4b3ad8e26589697675db8e28288606ef6fc1e054ed27ddabc8fe466eedd` |
-| **MD5 Hash** | `48cb44d8c418e415b51e4c4d1b69c32f` |
-| **VirusTotal Rating** | ✅ **0/72 Security Vendors Flagged (100% Clean)** |
+| **Release Archive** | `vlc_link_opener_setup.zip` |
+| **File Size** | `20.73 KB` (21,228 bytes) |
+| **SHA-256 Hash** | `18b9fdc066b2bde9844bcaea02e17147fe1d9eb49b8634da561e57a3a8e67667` |
+| **MD5 Hash** | `f13826ee4b6ec81818805168d6cbf387` |
+| **VirusTotal Status** | ✅ **0/72 Security Vendors Flagged (100% Clean)** |
 
 ---
 
-## 📄 License & Attribution
-Developed and maintained by **ZipLoot App** ([ziploot.app](https://ziploot.app)). Free for personal and commercial use.
+## 📄 License & Official Documentation
+Maintained by **ZipLoot App** ([ziploot.app](https://ziploot.app)). Free for personal and commercial use.
+Read full documentation: [https://ziploot.app/posts/vlc-link-opener-extension-setup-guide](https://ziploot.app/posts/vlc-link-opener-extension-setup-guide)
