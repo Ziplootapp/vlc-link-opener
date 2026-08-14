@@ -1,3 +1,4 @@
+# ZipLoot VLC Link Opener Setup Script v2.0 - Updated 2026-08-14
 # setup.ps1 - Automated 1-Click Setup Script for VLC Link Opener
 $ProjectRoot = $PSScriptRoot
 $NativeHostDir = Join-Path $ProjectRoot "native_host"
